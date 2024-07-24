@@ -148,7 +148,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <PrivacyPolicy color="#F2994A" className="text-xl" />
+                        <PrivacyPolicy color="#F2994A" className="text-2xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-verify-independently")}
@@ -159,7 +159,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <ShieldCheck color="#F2994A" className="text-xl" />
+                        <ShieldCheck color="#F2994A" className="text-2xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-validate-digital")}
@@ -169,7 +169,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <Fingerprint color="#F2994A" className="text-xl" />
+                        <Fingerprint color="#F2994A" className="text-2xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-enhance-security")}
@@ -180,7 +180,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <CloudUpload color="#F2994A" className="text-xl" />
+                        <CloudUpload color="#F2994A" className="text-2xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-ensure-document")}
