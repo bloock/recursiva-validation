@@ -136,7 +136,7 @@ function FileLoader() {
               </div>
             </Col>
             <Col lg={{ span: 16, order: 2 }} span={24} order={1}>
-              <div className="min-h-full flex flex-col justify-center m-8 mr-16">
+              <div className="min-h-full flex flex-col justify-center m-auto p-8 lg:m-8 lg:mr-16">
                 <p
                   className="text-0 leading-14 text-white text-center lg:text-left font-bold mb-4"
                   style={{ fontSize: "40px", lineHeight: "40px" }}
@@ -148,7 +148,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <PrivacyPolicy color="white" className="text-xl" />
+                        <PrivacyPolicy color="#F2994A" className="text-xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-verify-independently")}
@@ -159,7 +159,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <ShieldCheck color="white" className="text-xl" />
+                        <ShieldCheck color="#F2994A" className="text-xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-validate-digital")}
@@ -169,7 +169,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <Fingerprint color="white" className="text-xl" />
+                        <Fingerprint color="#F2994A" className="text-xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-enhance-security")}
@@ -180,7 +180,7 @@ function FileLoader() {
                   <Col lg={12} span={24}>
                     <div className="h-full flex items-center text-white">
                       <div className="flex items-center justify-center">
-                        <CloudUpload color="white" className="text-xl" />
+                        <CloudUpload color="#F2994A" className="text-xl" />
                       </div>
                       <p className="leading-6 p-4">
                         {t("home.subtitle-ensure-document")}
@@ -191,148 +191,6 @@ function FileLoader() {
               </div>
             </Col>
           </Row>
-        </Wrapper>
-        <DownOutlined
-          className="-mt-14 cursor-pointer p-4 text-xl text-white z-50"
-          onClick={() => {
-            document.querySelector(`#info-section`)?.scrollIntoView();
-          }}
-        />
-        <Wrapper
-          id="info-section"
-          className="min-h-screen flex items-center snap-center"
-        >
-          <div className="my-20 px-20">
-            <div className="text-center text-white text-custom-size p-4">
-              <p>{t("home.information.title")}</p>
-            </div>
-            <div className="flex flex-wrap justify-center">
-              <Card
-                className="m-4 sm:w-72 md:w-80 lg:w-96 xl:w-2/4 sm:h-64 md:h-72 lg:h-80 xl:h-96"
-                style={{
-                  width: "361px",
-                  height: "320px",
-                }}
-                bordered={false}
-              >
-                <div className="flex justify-center mb-4 p-6">
-                  <div className="flex flex-col items-center mr-10">
-                    <Link
-                      className="h-16 w-16 rounded-full mb-2 flex items-center justify-center"
-                      href="/docs/valid_certificate_file.pdf"
-                      target="_blank"
-                      style={{ backgroundColor: token.colorSuccess }}
-                    >
-                      <PrivacyPolicy color="white" className="text-xl" />
-                    </Link>
-                    <p className="text-center text-gray-500">
-                      {t("home.information.title")}
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center ">
-                    <Link
-                      className="h-16 w-16 rounded-full mb-2 flex items-center justify-center"
-                      href="/docs/tampered_certificate.pdf"
-                      target="_blank"
-                      style={{ backgroundColor: token.colorError }}
-                    >
-                      <LogNoAccess color="white" className="text-xl" />
-                    </Link>
-                    <p className="text-center text-gray-500">
-                      {t("home.information.second-title")}
-                    </p>
-                  </div>
-                </div>
-                <Divider className="mt-4" />
-                <div className="flex flex-col items-center">
-                  <p className="text-center font-bold text-md">
-                    {t("home.information.try-out.title")}
-                  </p>
-                  <p className="text-center text-sm text-gray-500">
-                    {t("home.information.try-out.subtitle")}
-                  </p>
-                </div>
-              </Card>
-
-              <Card
-                className="m-4 sm:w-72 md:w-80 lg:w-96 xl:w-2/4 sm:h-64 md:h-72 lg:h-80 xl:h-96"
-                style={{
-                  width: "361px",
-                  height: "320px",
-                }}
-                bordered={false}
-              >
-                <div className="flex justify-center mb-4 p-6">
-                  <div className="flex flex-col items-center">
-                    <div
-                      className="h-16 w-16 rounded-full mb-2 flex items-center justify-center"
-                      style={{ backgroundColor: token.colorPrimary }}
-                    >
-                      <OneFingerSelectHandGesture
-                        color="white"
-                        className="text-xl"
-                      />
-                    </div>
-                    <p className="text-center text-gray-500">
-                      {t("home.information.verify-documents.title-icon")}
-                    </p>
-                  </div>
-                </div>
-                <Divider className="mt-8" />
-                <div className="flex flex-col items-center">
-                  <p className="text-center font-bold text-md">
-                    {t("home.information.verify-documents.title")}
-                  </p>
-                  <p className="text-center text-sm text-gray-500">
-                    {t("home.information.verify-documents.subtitle")}
-                  </p>
-                </div>
-              </Card>
-
-              <Card
-                className="m-4 sm:w-72 md:w-80 lg:w-96 xl:w-2/4 sm:h-64 md:h-72 lg:h-80 xl:h-96"
-                style={{
-                  width: "361px",
-                  height: "320px",
-                }}
-                bordered={false}
-              >
-                <div className="flex justify-center mb-4 p-8">
-                  <div className="flex flex-col items-center mr-10">
-                    <div
-                      className="h-16 w-16 rounded-full mb-2 flex items-center justify-center"
-                      style={{ backgroundColor: token.colorSuccess }}
-                    >
-                      <CheckCircle color="white" className="text-xl" />
-                    </div>
-                    <p className="text-center text-gray-500">
-                      {t("home.information.check-results.title-icon")}
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center ">
-                    <div
-                      className="h-16 w-16 rounded-full mb-2 flex items-center justify-center"
-                      style={{ backgroundColor: token.colorError }}
-                    >
-                      <XmarkCircle color="white" className="text-xl" />
-                    </div>
-                    <p className="text-center text-gray-500">
-                      {t("home.information.check-results.second-title-icon")}
-                    </p>
-                  </div>
-                </div>
-                <Divider className="mt-4" />
-                <div className="flex flex-col items-center">
-                  <p className="text-center font-bold text-md">
-                    {t("home.information.check-results.title")}
-                  </p>
-                  <p className="text-center text-sm text-gray-500">
-                    {t("home.information.check-results.subtitle")}
-                  </p>
-                </div>
-              </Card>
-            </div>
-          </div>
         </Wrapper>
       </div>
     </>

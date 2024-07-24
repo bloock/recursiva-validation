@@ -9,7 +9,7 @@ import { Icon } from "react-extension-icons";
 function DirectoryPreview() {
   const { t } = useTranslation();
 
-  const { directoryResponse, onInputChange } = useVerification();
+  const { directoryResponse, onInputChange, isLoading } = useVerification();
 
   return (
     <Wrapper>
@@ -24,7 +24,7 @@ function DirectoryPreview() {
             bordered={false}
           >
             <h2 className="text-center mb-4">{t("directory.title")}</h2>
-            <List>
+            <List loading={isLoading}>
               {directoryResponse?.Links.map((item, key) => (
                 <List.Item
                   onClick={() => onInputChange(new IPFSCid(item.Hash["/"]))}

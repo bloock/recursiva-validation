@@ -1,14 +1,14 @@
 import { ConfigProvider, Layout } from "antd";
 import { Content, Header } from "antd/es/layout/layout";
 import { AliasToken } from "antd/es/theme/interface";
-import backgroundImage from "./assets/images/fondoVP.svg";
+import backgroundImage from "./assets/images/fondoVP.jpg";
 import validProofLogo from "./assets/images/logo-ValidProf.svg";
 import { VerificationProvider } from "./providers/VerificationProvider";
 
 function App() {
   const styleToken: Partial<AliasToken> = {
     colorPrimary: import.meta.env.VITE_PRIMARY_COLOR || "#0084B8",
-    fontFamily: import.meta.env.VITE_FONT_FAMILY || "Montserrat, sans-serif",
+    fontFamily: import.meta.env.VITE_FONT_FAMILY || "ABeeZee, sans-serif",
   };
 
   const componentToken = {
@@ -38,6 +38,7 @@ function App() {
           style={{ height: 64, paddingInline: 50 }}
         >
           <img
+            width={220}
             className="py-8 px-4 z-0"
             src={
               import.meta.env.VITE_LOGO
