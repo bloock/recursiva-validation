@@ -221,10 +221,13 @@ export const VerificationProvider: React.FC = () => {
 
     if (directory) {
       setIsLoading(true);
-      readDirectory = await fetch(directory.href).then((response) => {
-        return response.json();
-      });
+      readDirectory = await fetch(`${directory.href}?format=dag-json`).then(
+        (response) => {
+          return response.json();
+        }
+      );
       setIsLoading(false);
+
       setDirectoryResponse(readDirectory);
     }
   };
